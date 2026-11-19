@@ -7,12 +7,22 @@
            http://www.springframework.org/schema/beans/spring-beans.xsd
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
-
+    
+<!--    this is first bean-->
     <bean class="org.example.Student" name="student1">
         <property name="studentId" value="23424"/>
 
         <property name="studentName" value="Samyak"/>
 
         <property name="studentAddress" value="Maharashtra"/>
+    </bean>
+    
+<!--    this is second bean-->
+    <bean class="org.example.Student" name="student2">
+        <property name="studentId" value="1213"/>
+
+        <property name="studentName" value="Rishi"/>
+
+        <property name="studentAddress" value="Himachal"/>
     </bean>
 </beans>
