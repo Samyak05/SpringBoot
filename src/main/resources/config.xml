@@ -9,16 +9,10 @@
            http://www.springframework.org/schema/context/spring-context.xsd">
 
     <bean class="org.example.Student" name="student1">
-        <property name="studentId">
-            <value>2234</value>
-        </property>
+        <property name="studentId" value="23424"/>
 
-        <property name="studentName">
-            <value>Samyak</value>
-        </property>
+        <property name="studentName" value="Samyak"/>
 
-        <property name="studentAddress">
-            <value>Maharashtra</value>
-        </property>
+        <property name="studentAddress" value="Maharashtra"/>
     </bean>
 </beans>
