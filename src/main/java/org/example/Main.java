@@ -1,11 +1,15 @@
 package org.example;
 
+import org.springframework.context.ApplicationContext;
+import org.springframework.context.support.ClassPathXmlApplicationContext;
+
 public class Main {
     static void main() {
         System.out.println("Hello world");
 
+        ApplicationContext context = new ClassPathXmlApplicationContext("config.xml");
+        Student student1 = (Student) context.getBean("student1");
 
-        Student s1 = new Student(1, "Sam", "Delhi");
-        System.out.println(s1.getStudentName());
+        System.out.println(student1);
     }
 }
