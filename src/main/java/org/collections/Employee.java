@@ -10,18 +10,18 @@ public class Employee {
     private List<String> phone_no;
     private Map<String, String> courses;
     private Set<String> address;
-    private Properties properties;
+    private Properties props;
 
     public Employee() {
         super();
     }
 
-    public Employee(String name, List<String> phone_no, Map<String, String> courses, Set<String> address, Properties properties) {
+    public Employee(String name, List<String> phone_no, Map<String, String> courses, Set<String> address, Properties props) {
         this.name = name;
         this.phone_no = phone_no;
         this.courses = courses;
         this.address = address;
-        this.properties = properties;
+        this.props = props;
     }
 
     public String getName() {
@@ -56,12 +56,12 @@ public class Employee {
         this.address = address;
     }
 
-    public Properties getProperties() {
-        return properties;
+    public Properties getProps() {
+        return props;
     }
 
-    public void setProperties(Properties properties) {
-        this.properties = properties;
+    public void setProps(Properties props) {
+        this.props = props;
     }
 
     @Override
@@ -71,7 +71,7 @@ public class Employee {
                 ", phone_no=" + phone_no +
                 ", courses=" + courses +
                 ", address=" + address +
-                ", props=" + properties +
+                ", props=" + props +
                 '}';
     }
 }

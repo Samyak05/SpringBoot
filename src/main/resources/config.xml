@@ -14,7 +14,7 @@
     <!--    this is second bean-->
     <bean class="org.example.Student" name="student2" p:studentId="12112" p:studentName="Rishi" p:studentAddress="Himachal"/>
 
-<!--    Injecting Collections (List, Set, Map)-->
+    <!--    Injecting Collections (List, Set, Map)-->
     <bean class="org.collections.Employee" name="employee1">
         <property name="name" value="Samyak"/>
 
@@ -42,11 +42,23 @@
             </map>
         </property>
 
-        <property name="properties">
+        <property name="props">
             <props>
                 <prop key="Department">CSE</prop>
                 <prop key="Location">Managalore</prop>
             </props>
         </property>
     </bean>
+
+    <!--    Injecting Reference Type:-->
+    <!--    Inject reference of B to Class A-->
+    <bean name="B_ref" class="org.reference.B">
+        <property name="y" value="90"/>
+    </bean>
+
+    <bean name="A_ref" class="org.reference.A">
+        <property name="x" value="12"/>
+        <property name="object" ref="B_ref"/>
+    </bean>
+
 </beans>
