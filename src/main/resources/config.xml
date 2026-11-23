@@ -8,10 +8,45 @@
            http://www.springframework.org/schema/context
            http://www.springframework.org/schema/context/spring-context.xsd">
     
-<!--    this is first bean-->
+    <!--    this is first bean-->
     <bean class="org.example.Student" name="student1" p:studentId="23424" p:studentName="Samyak" p:studentAddress="Maharashtra"/>
 
     <!--    this is second bean-->
     <bean class="org.example.Student" name="student2" p:studentId="12112" p:studentName="Rishi" p:studentAddress="Himachal"/>
 
+<!--    Injecting Collections (List, Set, Map)-->
+    <bean class="org.collections.Employee" name="employee1">
+        <property name="name" value="Samyak"/>
+
+        <property name="phone_no">
+            <list>
+                <value>90193828</value>
+                <value>99008899</value>
+                <value>704789084</value>
+            </list>
+        </property>
+
+        <property name="address">
+            <set>
+                <value>abc</value>
+                <value>def</value>
+                <value>ghi</value>
+            </set>
+        </property>
+
+        <property name="courses">
+            <map>
+                <entry key="java" value="3months"/>
+                <entry key="python" value="1months"/>
+                <entry key="C++" value="2months"/>
+            </map>
+        </property>
+
+        <property name="properties">
+            <props>
+                <prop key="Department">CSE</prop>
+                <prop key="Location">Managalore</prop>
+            </props>
+        </property>
+    </bean>
 </beans>
