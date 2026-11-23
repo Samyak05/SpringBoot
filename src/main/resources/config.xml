@@ -61,4 +61,7 @@
         <property name="object" ref="B_ref"/>
     </bean>
 
+    <!--    Injecting Reference Type using p schema-->
+    <bean name="AA_ref" class="org.reference.A" p:x="99" p:object-ref="B_ref"/>
+
 </beans>
